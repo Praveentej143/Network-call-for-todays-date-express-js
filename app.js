@@ -1,9 +1,11 @@
 const express = require("express");
+
 const app = express();
+
 app.get("/", (request, response) => {
-  const newDate = new Date();
+  let myDate = new Date();
   response.send(
-    `${newDate.getDate()}-${newDate.getMonth()}-${newDate.getFullYear()}`
+    `${myDate.getDate()}-${myDate.getMonth() + 1}-${myDate.getFullYear()}`
   );
 });
-module.exports = add;
+module.exports = app;
